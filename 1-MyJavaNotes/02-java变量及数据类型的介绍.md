@@ -70,7 +70,7 @@
 			System.out.println(x);//读取x变量中的值，再打印
 			}
 			
-		* c:	变量使用时有作用域的限制。
+		* b: 变量使用时有作用域的限制。
 			public static void main(String[] args) {
 			int x = 20;
 			{
