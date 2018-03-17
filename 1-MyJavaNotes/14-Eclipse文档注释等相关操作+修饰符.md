@@ -332,114 +332,115 @@
 			public interface VIP {
 				public abstract void server(); //服务
 			}
-
-员工
-/*
- * 	员工：
-		姓名 String
-		工号 String
-*/
-public abstract class YuanGong {
-	// 成员变量
-	private String xingMing;
-	private String gongHao;
-	// 构造方法
-	public YuanGong() {
-		super();
-	}
-	public YuanGong(String xingMing, String gongHao) {
-		super();
-		this.xingMing = xingMing;
-		this.gongHao = gongHao;
-	
-	}
-	// 抽象方法
-	public abstract void work();
-	
-	// getters与setters
-	public String getXingMing() {
-		return xingMing;
-	}
-	public void setXingMing(String xingMing) {
-		this.xingMing = xingMing;
-	}
-	public String getGongHao() {
-		return gongHao;
-	}
-	public void setGongHao(String gongHao) {
-		this.gongHao = gongHao;
-	}
-	
-}
-
-服务员
-/*
- * 定义员工的子类 服务员类
- */
-public class FuWuYuan extends YuanGong implements VIP {
-	public FuWuYuan() {
-		super();
+```
+	员工
+	/*
+	 * 	员工：
+			姓名 String
+			工号 String
+	*/
+	public abstract class YuanGong {
+		// 成员变量
+		private String xingMing;
+		private String gongHao;
+		// 构造方法
+		public YuanGong() {
+			super();
+		}
+		public YuanGong(String xingMing, String gongHao) {
+			super();
+			this.xingMing = xingMing;
+			this.gongHao = gongHao;
+		
+		}
+		// 抽象方法
+		public abstract void work();
+		
+		// getters与setters
+		public String getXingMing() {
+			return xingMing;
+		}
+		public void setXingMing(String xingMing) {
+			this.xingMing = xingMing;
+		}
+		public String getGongHao() {
+			return gongHao;
+		}
+		public void setGongHao(String gongHao) {
+			this.gongHao = gongHao;
+		}
+		
 	}
 
-	public FuWuYuan(String xingMing, String gongHao) {
-		super(xingMing, gongHao);
-	}
-	@Override
-	public void work() {
-		System.out.println("亲，全身心为您服务，记得给好评哦");
-	}
-	@Override
-	public void server() {
-		System.out.println("给顾客倒酒");
-	}
-}
+	服务员
+	/*
+	 * 定义员工的子类 服务员类
+	 */
+	public class FuWuYuan extends YuanGong implements VIP {
+		public FuWuYuan() {
+			super();
+		}
 
-经理
-/*
- * 经理在员工的基础上，添加了奖金成员
- */
-public class JingLi extends YuanGong {
-	private double jiangJin;
-
-	public JingLi() {
-		super();
-	}
-	public JingLi(String xingMing, String gongHao, double jiangJin) {
-		super(xingMing, gongHao);
-		this.jiangJin = jiangJin;
+		public FuWuYuan(String xingMing, String gongHao) {
+			super(xingMing, gongHao);
+		}
+		@Override
+		public void work() {
+			System.out.println("亲，全身心为您服务，记得给好评哦");
+		}
+		@Override
+		public void server() {
+			System.out.println("给顾客倒酒");
+		}
 	}
 
-	public double getJiangJin() {
-		return jiangJin;
-	}
-	public void setJiangJin(double jiangJin) {
-		this.jiangJin = jiangJin;
+	经理
+	/*
+	 * 经理在员工的基础上，添加了奖金成员
+	 */
+	public class JingLi extends YuanGong {
+		private double jiangJin;
+
+		public JingLi() {
+			super();
+		}
+		public JingLi(String xingMing, String gongHao, double jiangJin) {
+			super(xingMing, gongHao);
+			this.jiangJin = jiangJin;
+		}
+
+		public double getJiangJin() {
+			return jiangJin;
+		}
+		public void setJiangJin(double jiangJin) {
+			this.jiangJin = jiangJin;
+		}
+
+		@Override
+		public void work() {
+			System.out.println("哪个员工让顾客不满意，我扣谁钱");
+		};
 	}
 
-	@Override
-	public void work() {
-		System.out.println("哪个员工让顾客不满意，我扣谁钱");
-	};
-}
+	厨师
+	/*
+	 * 定义员工的子类 厨师类
+	 */
+	public class ChuShi extends YuanGong implements VIP{
+		public ChuShi() {
+			super();
+		}
+		public ChuShi(String xingMing, String gongHao) {
+			super(xingMing, gongHao);
+		}
 
-厨师
-/*
- * 定义员工的子类 厨师类
- */
-public class ChuShi extends YuanGong implements VIP{
-	public ChuShi() {
-		super();
+		@Override
+		public void work() {
+			System.out.println("我做饭，放心吃吧，包您满意");
+		}
+		@Override
+		public void server() {
+			System.out.println("做菜加量加料");
+		}
 	}
-	public ChuShi(String xingMing, String gongHao) {
-		super(xingMing, gongHao);
-	}
-
-	@Override
-	public void work() {
-		System.out.println("我做饭，放心吃吧，包您满意");
-	}
-	@Override
-	public void server() {
-		System.out.println("做菜加量加料");
-	}
-}
+```
