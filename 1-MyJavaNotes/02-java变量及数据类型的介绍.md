@@ -296,12 +296,12 @@
 		System.out.println("------------------------------商城库存清单-----------------------------");
 		System.out.println("品牌型号	尺寸	价格	库存数");
 
-		步骤四:打印库存清单中部信息
+		//步骤五: 打印库存清单中部信息
 		//列表中部
 		System.out.println(macBrand+"	"+macSize+"	"+macPrice+"	"+macCount);
 		System.out.println(thinkpadBrand+"	"+thinkpadSize+"	"+thinkpadPrice+"	"+thinkpadCount);
 		System.out.println(ASUSBrand+"	"+ASUSSize+"	"+ASUSPrice+"	"ASUSCount);
-		打印库存清单底部信息
+		//步骤六: 打印库存清单底部信息
 		//列表底部
 		System.out.println("-----------------------------------------------------------------------");
 		System.out.println("总库存数："+totalCount); 
