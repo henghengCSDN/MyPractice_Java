@@ -1,4 +1,5 @@
 ### 01List接口的特点
+```
   A:List接口的特点:
    a:它是一个元素存取有序的集合。
         例如，存元素的顺序是11、22、33。那么集合中，元素的存储就是按照11、22、33的顺序完成的）。
@@ -9,8 +10,9 @@
      d:List接口的常用子类有：
       ArrayList集合
       LinkedList集合
-
+```
 ### 02List接口的特有方法
+```
 	A:List接口的特有方法(带索引的方法)
    a:增加元素方法
    add(Object e)：向集合末尾处，添加指定的元素 
@@ -75,9 +77,10 @@
       }
     d:查询元素方法
    get(int index)：获取指定索引处的元素，并返回该元素
-
+```
 
 ### 03迭代器的并发修改异常
+```
     A:迭代器的并发修改异常
      
      /*
@@ -113,9 +116,10 @@
      并发修改异常解决办法：
         在迭代时，不要使用集合的方法操作元素。
         或者通过ListIterator迭代器操作元素是可以的，ListIterator的出现，解决了使用Iterator迭代过程中可能会发生的错误情况。
-
+```
 
 ### 04数据的存储结构
+```
 	A:数据的存储结构
      a:栈结构:后进先出/先进后出(手枪弹夹) FILO (first in last out)
      b:队列结构:先进先出/后进后出(银行排队) FIFO(first in first out)
@@ -126,11 +130,10 @@
      d:链表结构
                查询慢:每次都需要从链头或者链尾找起
                增删快:只需要修改元素记录的下个元素的地址值即可不需要移动大量元素
-
-
-
+```
 
 ### 05ArrayList集合的自身特点
+```
    A:ArrayList集合的自身特点
      底层采用的是数组结构
      ArrayList al=new ArrayList();//创建了一个长度为0的Object类型数组
@@ -142,16 +145,20 @@
      a b c d e f g h k l
    添加m:
      a b c d e f g h k l m null null null null
+```
 
 ### 06LinkedList集合的自身特点
+```
   A:LinkedList集合的自身特点
      底层采用链表结构,每次查询都要从链头或链尾找起,查询相对数组较慢
      但是删除直接修改元素记录的地址值即可,不要大量移动元素
      
      LinkedList的索引决定是从链头开始找还是从链尾开始找
      如果该元素小于元素长度一半,从链头开始找起,如果大于元素长度的一半,则从链尾找起
+```
 
 ### 07LinkedList特有方法
+```
    *A:LinkedList特有方法:获取,添加,删除
 	   /*
      *  LinkedList 链表集合的特有功能
@@ -234,23 +241,27 @@
         
       }
     }
+```
 
 ### 08Vector类的特点
+```
    *A:Vector类的特点
        Vector集合数据存储的结构是数组结构，为JDK中最早提供的集合,它是线程同步的
        Vector中提供了一个独特的取出方式，就是枚举Enumeration，它其实就是早期的迭代器。
        此接口Enumeration的功能与 Iterator 接口的功能是类似的。
        Vector集合已被ArrayList替代。枚举Enumeration已被迭代器Iterator替代。
-
+```
 	   
 ### 09Set接口的特点
+```
    A:Set接口的特点
      a:它是个不包含重复元素的集合。
      b:Set集合取出元素的方式可以采用：迭代器、增强for。
      c:Set集合有多个子类，这里我们介绍其中的HashSet、LinkedHashSet这两个集合。
-
+```
 
 ### 10Set集合存储和迭代
+```
    A:Set集合存储和迭代
       /*
        *  Set接口,特点不重复元素,没索引
@@ -279,10 +290,11 @@
           }
         }
       }
-
+```
 
    
 ### 11哈希表的数据结构
+```
     A:哈希表的数据结构:(参见图解)
        
         加载因子:表中填入的记录数/哈希表的长度
@@ -293,8 +305,10 @@
         如果在存入第十三个(>12)元素,导致存储链子过长,会降低哈希表的性能,那么此时会扩充哈希表(在哈希),底层会开辟一个长度为原长度2倍的数组,把老元素拷贝到新数组中,再把新元素添加数组中
           
         当存入元素数量>哈希表长度*加载因子,就要扩容,因此加载因子决定扩容时机
+```
 
 ### 12字符串对象的哈希值
+```
       A:字符串对象的哈希值
       /*
        *  对象的哈希值,普通的十进制整数
@@ -330,9 +344,10 @@
               }
               return h;
           }
-
+```
         
 ### 13哈希表的存储过程
+```
    A:哈希表的存储过程
      public static void main(String[] args) {
         HashSet<String> set = new HashSet<String>();
@@ -355,9 +370,10 @@
     3.新元素会与该索引位置下的老元素利用equals方法一一对比
       一旦新元素.equals(老元素)返回true,停止对比,说明重复,不再存入
       如果与该索引位置下的老元素都通过equals方法对比返回false,说明没有重复,存入
- 
+ ```
  
 ### 14哈希表的存储自定义对象
+```
    A:哈希表的存储自定义对象
      /*
       *  HashSet集合的自身特点:
@@ -407,15 +423,11 @@
       public String toString(){
         return name+".."+age;
       }
-      
-
-
      }
-
-
-      
+```    
 
 ### 15自定义对象重写hashCode和equals
+```
 	 A:自定义对象重写hashCode和equals
 	  /*
           *  HashSet集合的自身特点:
@@ -490,14 +502,11 @@
           public String toString(){
             return name+".."+age;
           }
-          
-
-
          }
-
-
+```
 
 ### 16LinkedHashSet集合
+```
   A:LinkedHashSet集合
     /*
      *   LinkedHashSet 基于链表的哈希表实现
@@ -519,9 +528,10 @@
         System.out.println(link);
       }
     }
-
+```
 
 ### 17ArrayList,HashSet判断对象是否重复的原因
+```
   A:ArrayList,HashSet判断对象是否重复的原因
      a:ArrayList的contains方法原理:底层依赖于equals方法
        ArrayList的contains方法会使用调用方法时，
@@ -538,10 +548,10 @@
        如果不同，说明是不同元素，添加到集合。
        如果相同，再判断equals比较结果。返回true则相同元素；返回false则不同元素，添加到集合。
       所以，使用HashSet存储自定义类型，如果没有重写该类的hashCode与equals方法，则判断重复时，使用的是地址值，如果想通过内容比较元素是否相同，需要重写该元素类的hashcode与equals方法。
-
-
+```
  
-### 18hashCode和equals方法的面试题 
+### 18hashCode和equals方法的面试题
+```
  A:hashCode和equals的面试题
  /*
   *   两个对象  Person  p1 p2
@@ -567,3 +577,4 @@
     两个对象调用hashCode()方法哈希值相同=====>equals返回true
    
    所以说两个对象哈希值无论相同还是不同,equals都可能返回true
+```
