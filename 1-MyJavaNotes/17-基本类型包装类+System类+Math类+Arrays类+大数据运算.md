@@ -258,27 +258,28 @@
    	 }
 
 ### 14Math类的方法_2
+```
 	 *A:Math类的方法_2
 	/*
 	 *  static double round(doubl d)
 	 *  获取参数的四舍五入,取整数
 	 */
-  public static void function_6(){
-  	double d = Math.round(5.4195);
-  	System.out.println(d);
-  }
-  
-  /*
-   *  static double random() 返回随机数 0.0-1.0之间
-   *  来源,也是Random类
-   */
-  public static void function_5(){
-  	for(int i = 0 ; i < 10 ;i++){
-  		double d = Math.random();
-  		System.out.println(d);
-  	}
-  }
+	public static void function_6(){
+		double d = Math.round(5.4195);
+		System.out.println(d);
+	}
 
+	/*
+	*  static double random() 返回随机数 0.0-1.0之间
+	*  来源,也是Random类
+	*/
+	public static void function_5(){
+		for(int i = 0 ; i < 10 ;i++){
+			double d = Math.random();
+			System.out.println(d);
+		}
+	}
+```
 ### 15Arrays工具类 
 	 *A:Arrays工具类:
     public class ArraysDemo {
@@ -366,9 +367,10 @@
 	    	}
 
 			
-### 17BigInteger类概述和构造方法   
+### 17BigInteger类概述和构造方法 
 	 *A:BigInteger类概述和构造方法
-   public static void main(String[] args) {
+```
+	public static void main(String[] args) {
    		function();
    	}
     /*
@@ -381,7 +383,7 @@
    		BigInteger b1 = new BigInteger("5861694569514568465846668464684562385634168451684568645684564564");
    		System.out.println(b1);
    	}
-
+```
 ### 18BigInteger类四则运算  
 	 *A:BigInteger类四则运算
     public static void main(String[] args) {
