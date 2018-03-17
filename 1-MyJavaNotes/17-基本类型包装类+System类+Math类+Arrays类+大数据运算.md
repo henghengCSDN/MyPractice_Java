@@ -57,9 +57,9 @@
 
 
 ### 05Integer类其他方法
-   *A:Integer类其他方法
-	     /*
-		 * Integer类的3个静态方法
+	 *A:Integer类其他方法
+	    /*
+	     * Integer类的3个静态方法
 		 * 做进制的转换
 		 * 十进制转成二进制  toBinarString(int)
 		 * 十进制转成八进制  toOctalString(int)
@@ -82,31 +82,26 @@
 	      	System.out.println(Integer.MAX_VALUE);
 	      	System.out.println(Integer.MIN_VALUE);
 	      }
- 
+
 ### 06自动装箱和自动拆箱 
-  *A:自动装箱与自动拆箱:
-    //JDK1.5新特性
-	//自动装箱,拆箱的 好处: 基本类型和引用类直接运算
-    //自动装箱:使用Integer.valueOf(整数值)返回一个封装了该整数值的Integer对象
-    //自动拆箱:使用Integer对象.intValue()返回Integer对象中封装的整数值
-	public static void function(){
-		//引用类型 , 引用变量一定指向对象
-		//自动装箱, 基本数据类型1, 直接变成了对象
-		
-		Integer in = 1; // Integer in = new Integer(1)
-		//in 是引用类型,不能和基本类型运算, 自动拆箱,引用类型in,转换基本类型
-		
-		//in+1  ==> in.inValue()+1 = 2    
-		//in = 2    自动装箱
-		in = in + 1;
-		
-		System.out.println(in);
-		
-	}
-      
+	 *A:自动装箱与自动拆箱:
+		//JDK1.5新特性
+		//自动装箱,拆箱的 好处: 基本类型和引用类直接运算
+		//自动装箱:使用Integer.valueOf(整数值)返回一个封装了该整数值的Integer对象
+		//自动拆箱:使用Integer对象.intValue()返回Integer对象中封装的整数值
+		public static void function(){
+			//引用类型 , 引用变量一定指向对象
+			//自动装箱, 基本数据类型1, 直接变成了对象
+			Integer in = 1; // Integer in = new Integer(1)
+			//in 是引用类型,不能和基本类型运算, 自动拆箱,引用类型in,转换基本类型
+			//in+1  ==> in.inValue()+1 = 2    
+			//in = 2    自动装箱
+			in = in + 1;
+			System.out.println(in);
+	}   
 
 ### 07自动装箱和自动拆箱练习题 
-   *A:自动装箱与自动拆箱:
+	 *A:自动装箱与自动拆箱:
 	    Integer i = new Integer(1);
 	 	Integer j = new Integer(1);
 	 	System.out.println(i==j);// false 对象地址
@@ -131,7 +126,7 @@
        
 	   
 ### 08System类方法currentTimeMillis 
-   *A:System类方法currentTimeMillis():用于计算程序的执行时间
+	 *A:System类方法currentTimeMillis():用于计算程序的执行时间
         /*
       	 *  获取系统当前毫秒值
       	 *  static long currentTimeMillis()
@@ -147,7 +142,7 @@
       	}
  
 ### 09System类方法exit 
-     *A:System类方法exit()方法
+	 *A:System类方法exit()方法
 		     /*
 		 	 *  退出虚拟机,所有程序全停止
 		 	 *  static void exit(0)
@@ -159,7 +154,7 @@
 		 		}
 		 	}
 ### 10System类方法gc 
-   A:System类方法gc
+	 *A:System类方法gc
         public class Person {
         	public void finalize(){
         		System.out.println("垃圾收取了");
@@ -185,7 +180,7 @@
      	}
 
 ### 11System类方法getProperties 
-  A:System类方法getProperties(了解)
+	 *A:System类方法getProperties(了解)
      /*
       *  获取当前操作系统的属性:例如操作系统名称,
       *  static Properties getProperties() 
@@ -195,7 +190,7 @@
      }
       
 ### 12System类方法arraycopy
-	 A:System类方法arraycopy：
+	 *A:System类方法arraycopy：
 	  /*
 	   * System类方法,复制数组
 	   * arraycopy(Object src, int srcPos, Object dest, int destPos, int length)
@@ -216,11 +211,11 @@
 	  }
 	  
 ### 13Math类的方法_1
-   A:Math类中的方法
-   /*
-   	 * static double sqrt(double d)
-   	 * 返回参数的平方根
-   	 */
+	 *A:Math类中的方法
+		/*
+		 * static double sqrt(double d)
+		 * 返回参数的平方根
+		 */
    	public static void function_4(){
    		double d = Math.sqrt(-2);
    		System.out.println(d);
@@ -263,11 +258,11 @@
    	 }
 
 ### 14Math类的方法_2
- A:Math类的方法_2
-  /*
-   *  static double round(doubl d)
-   *  获取参数的四舍五入,取整数
-   */
+	 *A:Math类的方法_2
+	/*
+	 *  static double round(doubl d)
+	 *  获取参数的四舍五入,取整数
+	 */
   public static void function_6(){
   	double d = Math.round(5.4195);
   	System.out.println(d);
@@ -285,7 +280,7 @@
   }
 
 ### 15Arrays工具类 
-  A:Arrays工具类:
+	 *A:Arrays工具类:
     public class ArraysDemo {
     	public static void main(String[] args) {
     		function_2();
@@ -347,7 +342,7 @@
 
  
 ### 16数组复制练习
-   *A:数组复制练习:
+	 *A:数组复制练习:
 	    public static void main(String[] args) {
 	    		int[] arr = {56,65,11,98,57,43,16,18,100,200};
 	    		int[] newArray = test(arr);
@@ -372,7 +367,7 @@
 
 			
 ### 17BigInteger类概述和构造方法   
- A:BigInteger类概述和构造方法
+	 *A:BigInteger类概述和构造方法
    public static void main(String[] args) {
    		function();
    	}
@@ -388,7 +383,7 @@
    	}
 
 ### 18BigInteger类四则运算  
- A:BigInteger类四则运算
+	 *A:BigInteger类四则运算
     public static void main(String[] args) {
    		function_1();
    	}
@@ -418,7 +413,7 @@
 	 }
 
 ### 19员工案例的子类的编写
- A:BigDecimal类概述 
+	 *A:BigDecimal类概述 
     
     /*
      * 计算结果,未知
@@ -431,8 +426,8 @@
     */
 
 ### 20BigDecimal类实现加法减法乘法  
- A:BigDecimal类实现加法减法乘法
-  /*
+	 *A:BigDecimal类实现加法减法乘法
+	/*
   	 *  BigDecimal实现三则运算
   	 *  + - *
   	 */
@@ -457,7 +452,7 @@
   	}
 
 ### 21BigDecimal类实现除法
-	 A:BigDecimal类实现除法
+	 *A:BigDecimal类实现除法
 	 /*
 	  * BigDecimal实现除法运算
 	  * divide(BigDecimal divisor, int scale, int roundingMode) 
