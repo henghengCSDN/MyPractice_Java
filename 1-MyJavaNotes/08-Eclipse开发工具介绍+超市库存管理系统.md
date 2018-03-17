@@ -1,5 +1,5 @@
 ### 01Eclipse的下载安装
-	* A: Eclipse的下载安装		
+	* A: Eclipse的下载安装
 		* a: 下载
 			* http://www.eclipse.org
 		* b: 安装
@@ -85,10 +85,8 @@
 ### 07Eclipse的快捷键
 	* A: Eclipse的快捷键
 		* a: 内容辅助键  Alt+/
-		
 			* 自动补齐main方法  main 然后 Alt+/
-			
-			* 自动补齐输出语句  syso 然后 Alt+/
+			* 自动补齐输出语句  syso 然后 Alt+/
 		* b: 格式化代码
 			* Ctrl+Shift+f
 			* 代码区域右键 -- Source – Format
