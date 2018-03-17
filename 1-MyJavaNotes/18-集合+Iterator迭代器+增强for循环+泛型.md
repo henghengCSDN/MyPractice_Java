@@ -35,6 +35,7 @@
        集合中存储的元素必须是引用类型数据
 
 ### 03集合继承关系图
+```
     A:集合继承关系图
      a:ArrayList的继承关系:
      查看ArrayList类发现它继承了抽象类AbstractList同时实现接口List，而List接口又继承了Collection接口。Collection接口为最顶层集合接口了。
@@ -49,7 +50,7 @@
        Collecton接口常用的子接口有：List接口、Set接口
        List接口常用的子类有：ArrayList类、LinkedList类
        Set接口常用的子类有：HashSet类、LinkedHashSet类
-     
+
                               Collection 接口     
                                    |
      ----------------------------------------------------------------
@@ -59,7 +60,7 @@
  ----------------                                             -------------
  |              |                                             |            |
 ArrayList类    LinkedList类                                 HashSet类     LinkedHashSet类
-
+```
 ### 04集合Collection的方法
 	A:集合Collection的方法
      /*
@@ -138,6 +139,7 @@ ArrayList类    LinkedList类                                 HashSet类     Lin
      }
 
 ### 05集合Collection的remove方法
+```
    A:05集合Collection的remove方法
     /*
      * Collection接口方法
@@ -157,9 +159,9 @@ ArrayList类    LinkedList类                                 HashSet类     Lin
       System.out.println(b);
       System.out.println(coll);
     }
-
-	
+```
 ### 06迭代器的概述
+```
   A:迭代器概述:
    a:java中提供了很多个集合，它们在存储元素时，采用的存储方式不同。
     我们要取出这些集合中的元素，可通过一种通用的获取方式来完成。
@@ -169,8 +171,10 @@ ArrayList类    LinkedList类                                 HashSet类     Lin
    
    c:每种集合的底层的数据结构不同,例如ArrayList是数组,LinkedList底层是链表,但是无论使用那种集合,我们都会有判断是否有元素
      以及取出里面的元素的动作,那么Java为我们提供一个迭代器定义了统一的判断元素和取元素的方法 
+```
 
 ### 07迭代器的实现原理
+```
    *A:迭代器的实现原理
 	  /*
      *  集合中的迭代器:
@@ -187,8 +191,10 @@ ArrayList类    LinkedList类                                 HashSet类     Lin
      *     Iterator it =array.iterator(),运行结果就是Iterator接口的实现类的对象
      *     it是接口的实现类对象,调用方法 hasNext 和 next 集合元素迭代
      */
+```
 
 ### 08迭代器的代码实现
+```
    *A:迭代器的代码实现
       public class IteratorDemo {
         public static void main(String[] args) {
@@ -212,13 +218,13 @@ ArrayList类    LinkedList类                                 HashSet类     Lin
           while(it.hasNext()){
             String s = it.next();
             System.out.println(s);
-          }
-          
-         
-          
+          } 
         }
       }
+```
+
 ### 09迭代器的执行过程
+```
    A:迭代器的执行过程
      a:迭代器的原理:
        while(it.hasNext()) {
@@ -244,8 +250,10 @@ ArrayList类    LinkedList类                                 HashSet类     Lin
         for (Iterator<String> it2 = coll.iterator(); it2.hasNext();  ) {
          System.out.println(it2.next());
        } 
+```
 
-### 10集合迭代中的转型 
+### 10集合迭代中的转型
+```
    A:集合迭代中的转型
      a:在使用集合时，我们需要注意以下几点：
        集合中存储其实都是对象的地址。
@@ -278,11 +286,10 @@ ArrayList类    LinkedList类                                 HashSet类     Lin
      //当使用Iterator<String>控制元素类型后，就不需要强转了。获取到的元素直接就是String类型
       System.out.println(str.length());
      }
-
-
-
+```
 	 
 ### 11增强for循环遍历数组
+```
    *A:增强for循环遍历数组
      a:格式:
      /*
@@ -316,7 +323,9 @@ ArrayList类    LinkedList类                                 HashSet类     Lin
         }
         System.out.println(arr[0]);
       }
+```
 ### 12增强for循环遍历集合 
+```
       A:增强for循环遍历集合  
         /*
          *  增强for循环遍历集合
@@ -330,8 +339,10 @@ ArrayList类    LinkedList类                                 HashSet类     Lin
             System.out.println(p);// System.out.println(p.toString());
           }
         }
+```
         
-### 13泛型的引入 
+### 13泛型的引入
+```
    A:泛型的引入
     在前面学习集合时，我们都知道集合中是可以存放任意对象的，
     只要把对象存储集合后，那么这时他们都会被提升成Object类型。
@@ -356,10 +367,10 @@ ArrayList类    LinkedList类                                 HashSet类     Lin
         }
       }
     }
-
-    
+```
 
 ### 14泛型的定义和使用
+```
   A:泛型的定义和使用
     /*
      * JDK1.5 出现新的安全机制,保证程序的安全性
@@ -385,16 +396,18 @@ ArrayList类    LinkedList类                                 HashSet类     Lin
         }
       }
     }
+```
 
 ### 15Java中的伪泛型
+```
 	 A:Java中的伪泛型：
 	   泛型只在编译时存在,编译后就被擦除,在编译之前我们就可以限制集合的类型,起到作用
      例如:ArrayList<String> al=new ArrayList<String>();
      编译后:ArrayList al=new ArrayList();
-
-
-	 
+```
+ 
 ### 16泛型类
+```
   A:泛型类:
     a:定义格式：
       修饰符 class 类名<代表泛型的变量> {  }
@@ -421,8 +434,10 @@ ArrayList类    LinkedList类                                 HashSet类     Lin
            public boolean add(Integer e){ }
            public Integer get(int index){  }
       }
+```
 
 ### 17泛型的方法
+```
   A:泛型的方法
     a:定义格式：修饰符 <代表泛型的变量> 返回值类型 方法名(参数){  }
     b:泛型方法的使用:
@@ -446,9 +461,10 @@ ArrayList类    LinkedList类                                 HashSet类     Lin
       
       此时，变量T的值就是Integer类型。变量T，可以与定义集合的泛型不同
       public <Integer> Integer[] toArray(Integer[] a){  } 
+```
 
- 
-### 18泛型的接口 
+### 18泛型的接口
+```
    A:泛型的接口:
      /*
       *  带有泛型的接口
@@ -471,8 +487,10 @@ ArrayList类    LinkedList类                                 HashSet类     Lin
      public class GenericDemo2 {
       
      }
- 
+```
+
 ### 19泛型的好处
+```
   A:泛型的好处
     a:将运行时期的ClassCastException，转移到了编译时期变成了编译失败。
     b:避免了类型强转的麻烦。
@@ -493,8 +511,10 @@ ArrayList类    LinkedList类                                 HashSet类     Lin
         }
       }
     }
+```
 
-### 20泛型的通配符   
+### 20泛型的通配符
+``` 
    A:泛型的通配符
    /*
     *  泛型的通配符
@@ -528,8 +548,10 @@ ArrayList类    LinkedList类                                 HashSet类     Lin
       }
     }
    }
- 
-### 21泛型的限定 
+```
+
+### 21泛型的限定
+```
  A:泛型的限定
    /*
     *  将的酒店员工,厨师,服务员,经理,分别存储到3个集合中
@@ -579,3 +601,4 @@ ArrayList类    LinkedList类                                 HashSet类     Lin
        }
     }
    }
+```

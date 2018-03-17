@@ -367,22 +367,22 @@
 	    	}
 
 			
-### 17BigInteger类概述和构造方法 
-	 *A:BigInteger类概述和构造方法
+### 17BigInteger类概述和构造方法
 ```
-	public static void main(String[] args) {
-   		function();
-   	}
-    /*
-   	 * BigInteger类的构造方法
-   	 * 传递字符串,要求数字格式,没有长度限制
-   	 */
-   	public static void function(){
-   		BigInteger b = new BigInteger("8465846668464684562385634168451684568645684564564");
-   		System.out.println(b);
-   		BigInteger b1 = new BigInteger("5861694569514568465846668464684562385634168451684568645684564564");
-   		System.out.println(b1);
-   	}
+	*A:BigInteger类概述和构造方法
+		public static void main(String[] args) {
+			function();
+		}
+		/*
+		 * BigInteger类的构造方法
+		 * 传递字符串,要求数字格式,没有长度限制
+		 */
+		public static void function(){
+			BigInteger b = new BigInteger("8465846668464684562385634168451684568645684564564");
+			System.out.println(b);
+			BigInteger b1 = new BigInteger("5861694569514568465846668464684562385634168451684568645684564564");
+			System.out.println(b1);
+		}
 ```
 ### 18BigInteger类四则运算  
 	 *A:BigInteger类四则运算
