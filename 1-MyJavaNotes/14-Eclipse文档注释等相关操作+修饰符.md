@@ -45,7 +45,7 @@
 		同时，abstract与static不能同时使用；
 		同时，abstract与final不能同时使用。
 
-	C: 修饰类能够使用的修饰符：
+	C: 修饰类能够使用的修饰符：
 		修饰类只能使用public、默认的、final、abstract关键字
 		使用最多的是 public关键字
 
@@ -72,8 +72,7 @@
 			public final int count5 = 100;
 			public static int count6 = 100;
 
-
-	E:修饰构造方法能够使用的修饰符：
+	E:修饰构造方法能够使用的修饰符：
 		public : 公共的
 		protected : 受保护的
 			: 默认的
@@ -86,7 +85,7 @@
 			Demo(){}
 			private Demo(){}
 
-			修饰成员方法能够使用的修饰符：
+			修饰成员方法能够使用的修饰符：
 				public : 公共的
 				protected : 受保护的
 					: 默认的
@@ -118,7 +117,7 @@
 		}
 	}
 
-	长方形类
+	长方形类
 	public class CFX {
 		//因为长与宽，在现实事物中属于事物的一部分，所以定义成员变量
 		private int chang;
@@ -311,36 +310,35 @@
 
 		员工的类型有经理、厨师、服务员，它们有共同的属性（姓名、工号、），经理额外属性（奖金）。
 
-			根据“向酒店中，增加多名员工（其中包含1名经理，1名厨师、2名服务员）”。分析出，要创建一个酒店对象，并添加4名员工到酒店对象的员工集合中。
+		根据“向酒店中，增加多名员工（其中包含1名经理，1名厨师、2名服务员）”。分析出，要创建一个酒店对象，并添加4名员工到酒店对象的员工集合中。
 		酒店员工集合添加新员工： 经理对象
 		酒店员工集合添加新员工： 厨师对象
 		酒店员工集合添加新员工： 服务员对象
 		酒店员工集合添加新员工： 服务员对象
 
-			根据“获取酒店幸运员工”。分析出，从酒店员工集合随机得到一名员工对象。
-		1. 从酒店员工集合长度范围内，随机产生一个随机数
-		2. 使用该随机数作为集合的索引，返回该索引处对应的员工对象
+		根据“获取酒店幸运员工”。分析出，从酒店员工集合随机得到一名员工对象。
+			1. 从酒店员工集合长度范围内，随机产生一个随机数
+			2. 使用该随机数作为集合的索引，返回该索引处对应的员工对象
 
-			根据“酒店开设VIP服务，酒店的厨师与服务员可以提供VIP服务。（厨师做菜加量、服务员给顾客倒酒）”。分析出，这是要增加一个VIP的接口，接口中提供个VIP服务的方法。让厨师与服务员实现该接口。
-		interface VIP服务{
-		     抽象方法：服务
-		}
-		class 厨师 extends 员工 implements VIP服务{ 重写服务方法 }
-		class 服务员 extends 员工 implements VIP服务{ 重写服务方法 }
+		根据“酒店开设VIP服务，酒店的厨师与服务员可以提供VIP服务。（厨师做菜加量、服务员给顾客倒酒）”。分析出，这是要增加一个VIP的接口，接口中提供个VIP服务的方法。让厨师与服务员实现该接口。
+			interface VIP服务{
+				抽象方法：服务
+			}
+			class 厨师 extends 员工 implements VIP服务{ 重写服务方法 }
+			class 服务员 extends 员工 implements VIP服务{ 重写服务方法 }
 
-	B:
-		VIP服务
-public interface VIP {
-     public abstract void server(); //服务
-}
+	* B:
+		VIP服务
+			public interface VIP {
+				public abstract void server(); //服务
+			}
 
-	员工
+员工
 /*
  * 	员工：
-		 姓名 String
-		 工号 String
-	
- */
+		姓名 String
+		工号 String
+*/
 public abstract class YuanGong {
 	// 成员变量
 	private String xingMing;
@@ -374,7 +372,7 @@ public abstract class YuanGong {
 	
 }
 
-	服务员
+服务员
 /*
  * 定义员工的子类 服务员类
  */
@@ -396,7 +394,7 @@ public class FuWuYuan extends YuanGong implements VIP {
 	}
 }
 
-	经理
+经理
 /*
  * 经理在员工的基础上，添加了奖金成员
  */
@@ -424,7 +422,7 @@ public class JingLi extends YuanGong {
 	};
 }
 
-	厨师
+厨师
 /*
  * 定义员工的子类 厨师类
  */
